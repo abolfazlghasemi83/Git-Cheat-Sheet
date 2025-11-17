@@ -1,6 +1,10 @@
 # 📚 Git Guide: دستورات گیت (Git Commands)
 
->  This guide includes essential Git commands in both Persian and English.                                                                این راهنما شامل دستورات ضروری گیت به دو زبان فارسی و انگلیسی است.
+>  This guide includes essential Git commands in both Persian and English.
+
+
+>     این راهنما شامل دستورات ضروری گیت به دو زبان فارسی و انگلیسی است.
+
 
 ---
 
