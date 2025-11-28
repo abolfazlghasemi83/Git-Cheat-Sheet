@@ -32,9 +32,9 @@ English: Displays all existing branches in the local repository, marking the cur
 
 دستور / Command:
 
-Bash
-
+```bash
 git branch
+```
 2.1. ایجاد شاخه جدید (Create a New Branch)
 فارسی: یک شاخه جدید بر اساس Commit فعلی ایجاد می‌کند. (توجه: به طور خودکار به آن شاخه سوییچ نمی‌کند.)
 
@@ -42,9 +42,9 @@ English: Creates a new branch based on the current commit. (Note: It does not sw
 
 دستور / Command:
 
-Bash
-
+```bash
 git branch new-feature
+```
 2.2. سوییچ به شاخه (Switch Branches)
 فارسی: شما را به شاخه مشخص شده منتقل می‌کند. همچنین برای بازگرداندن فایل‌های فضای کاری به آخرین Commit استفاده می‌شود.
 
@@ -52,9 +52,9 @@ English: Moves you to the specified branch. It is also used to revert working fi
 
 دستور / Command:
 
-Bash
-
+```bash
 git checkout branch-name
+```
 2.3. ایجاد و سوییچ همزمان (Create and Switch Simultaneously)
 فارسی: یک شاخه جدید ایجاد کرده و بلافاصله به آن سوییچ می‌کند. این دستور جایگزینی مدرن برای git checkout -b است.
 
@@ -62,9 +62,9 @@ English: Creates a new branch and switches to it immediately. This is the modern
 
 دستور / Command:
 
-Bash
-
+```bash
 git switch -c new-branch-name
+```
 2.4. ادغام شاخه‌ها (Merge Branches)
 فارسی: تغییرات از شاخه مشخص شده را با شاخه فعلی ادغام می‌کند. این کار یک Commit جدید (Merge Commit) ایجاد می‌کند.
 
@@ -72,10 +72,12 @@ English: Merges changes from the specified branch into the current branch. This 
 
 دستور / Command:
 
-Bash
+
 
 # مطمئن شوید که در شاخه مقصد هستید (مثلاً main)
+```bash
 git merge feature-branch
+```
 2.5. حذف شاخه (Delete a Branch)
 فارسی: شاخه محلی مشخص شده را حذف می‌کند. پرچم -d تنها در صورتی شاخه را حذف می‌کند که Merge شده باشد. از -D برای حذف اجباری استفاده کنید.
 
@@ -83,9 +85,9 @@ English: Deletes the specified local branch. The -d flag only deletes the branch
 
 دستور / Command:
 
-Bash
-
+```bash
 git branch -d old-branch-name
+```
 🕰️ 3. تاریخچه، بازگردانی و Diff (History, Undoing, and Diff)
 3.1. مشاهده تاریخچه (View History)
 فارسی: تاریخچه Commitها را به ترتیب زمانی معکوس نمایش می‌دهد.
@@ -94,13 +96,16 @@ English: Displays the history of commits in reverse chronological order.
 
 دستور / Command:
 
-Bash
 
 # نمایش ساده
+```bash
 git log
+```
 
 # نمایش گرافیکی خطی
+```bash
 git log --oneline --graph
+```
 3.2. بررسی تفاوت‌ها (View Differences - Diff)
 فارسی: تفاوت‌ها بین فضای کاری، Staging Area و آخرین Commit را نشان می‌دهد.
 
@@ -108,16 +113,22 @@ English: Shows the differences between the working directory, the Staging Area, 
 
 دستور / Command:
 
-Bash
+
 
 # تفاوت بین فضای کاری و Staging
+```bash
 git diff
+```
 
 # تفاوت بین Staging و آخرین Commit
+```bash
 git diff --staged
+```
 
 # تفاوت بین دو Commit
+```bash
 git diff commit_hash_1 commit_hash_2
+```
 3.3. بازگرداندن فایل‌ها (Discard Local Changes)
 فارسی: تغییرات محلی یک فایل را لغو می‌کند و آن را به حالت آخرین Commit یا Staged برمی‌گرداند.
 
@@ -125,9 +136,11 @@ English: Undoes local modifications to a file, restoring it to the state of the 
 
 دستور / Command:
 
-Bash
 
+
+```bash
 git restore file_name.txt
+```
 3.4. خروج از Staging (Unstage Files)
 فارسی: فایل‌ها را از Staging Area خارج می‌کند و آن‌ها را در فضای کاری نگه می‌دارد.
 
@@ -135,9 +148,9 @@ English: Unstages files from the Staging Area, keeping them in the working direc
 
 دستور / Command:
 
-Bash
-
+```bash
 git restore --staged file_name.txt
+```
 3.5. بازنشانی (Reset)
 فارسی: تاریخچه Commit را تغییر می‌دهد و به Commit قبلی بازمی‌گردد. حالت soft Commit را حذف می‌کند اما فایل‌ها را در Staging نگه می‌دارد. حالت hard Commit و تمام تغییرات را حذف می‌کند.
 
@@ -145,13 +158,17 @@ English: Modifies the commit history and reverts to a previous commit. soft remo
 
 دستور / Command:
 
-Bash
+
 
 # بازگشت به commit قبلی (فایل‌ها دست نخورده باقی می‌مانند)
+```bash
 git reset HEAD~1
+```
 
 # بازگشت به commit خاص (تمام تغییرات پس از آن commit از بین می‌روند)
+```bash
 git reset --hard commit_hash
+```
 ⚙️ 4. دستورات متفرقه و پیشرفته (Miscellaneous and Advanced Commands)
 4.1. نمایش اطلاعات ریموت (Show Remote Info)
 فارسی: جزئیات مخازن از راه دور پیکربندی شده (مانند آدرس URL) را نمایش می‌دهد.
@@ -160,9 +177,9 @@ English: Displays details of the configured remote repositories (such as the URL
 
 دستور / Command:
 
-Bash
-
+```bash
 git remote -v
+```
 4.2. نادیده گرفتن فایل‌ها (Ignoring Files)
 فارسی: برای تعیین فایل‌ها و پوشه‌هایی که گیت نباید ردیابی کند (مانند فایل‌های موقت، لاگ‌ها، یا پوشه node_modules).
 
@@ -170,8 +187,12 @@ English: Used to specify files and directories that Git should not track (e.g., 
 
 دستور / Command:
 
-Bash
+
 
 # پس از ایجاد یا ویرایش فایل .gitignore
+```bash
 git add .gitignore
+```
+```bash
 git commit -m "Add .gitignore file"
+```
