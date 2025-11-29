@@ -1,21 +1,25 @@
-📚 Git Guide: دستورات گیت (Git Commands)
-This guide includes essential Git commands in both Persian and English.
+# 📚 **Git Guide: دستورات گیت (Git Commands)**
 
-این راهنما شامل دستورات ضروری گیت به دو زبان فارسی و انگلیسی است.
+> This guide includes essential Git commands in both Persian and English.
+> این راهنما شامل دستورات ضروری گیت به دو زبان فارسی و انگلیسی است.
 
-🚀 ۱. راه‌اندازی و پیکربندی (Setup & Configuration)
-1.1. تنظیم نام و ایمیل (Set Name and Email)
-فارسی: این دستور نام کاربری شما را برای Commitهای محلی تنظیم می‌کند.
+---
 
-English: This command sets your username for local commits.
+## 🚀 **۱. راه‌اندازی و پیکربندی (Setup & Configuration)**
 
-دستور / Command:
+### 1.1. **تنظیم نام و ایمیل (Set Name and Email)**
 
-Bash
+**فارسی:** این دستور نام کاربری شما را برای **Commit**های محلی تنظیم می‌کند.
 
+**English:** This command sets your username for local **commits**.
+
+**دستور / Command:**
+```bash
 git config --global user.name "Your Name"
 git config --global user.email "your.email@example.com"
-🌳 ۲. شاخه‌ها و ادغام (Branches and Merging)
+```
+
+۲. شاخه‌ها و ادغام (Branches and Merging)
 2.1. نمایش شاخه‌ها (List Branches)
 فارسی: تمام شاخه‌های موجود در مخزن محلی را نمایش می‌دهد و شاخه فعلی را با ستاره (*) مشخص می‌کند.
 
@@ -23,7 +27,7 @@ English: Displays all existing branches in the local repository, marking the cur
 
 دستور / Command:
 
-Bash
+
 
 git branch
 2.2. ایجاد شاخه جدید (Create a New Branch)
@@ -33,7 +37,7 @@ English: Creates a new branch based on the current commit. (Note: It does not sw
 
 دستور / Command:
 
-Bash
+
 
 git branch new-feature
 2.3. سوییچ به شاخه (Switch Branches)
@@ -43,7 +47,7 @@ English: Moves you to the specified branch. It is also used to revert working fi
 
 دستور / Command:
 
-Bash
+
 
 git checkout branch-name
 2.4. ایجاد و سوییچ همزمان (Create and Switch Simultaneously)
@@ -53,7 +57,7 @@ English: Creates a new branch and switches to it immediately. This is the modern
 
 دستور / Command:
 
-Bash
+
 
 git switch -c new-branch-name
 2.5. ادغام شاخه‌ها (Merge Branches)
@@ -63,7 +67,7 @@ English: Merges changes from the specified branch into the current branch. This 
 
 دستور / Command:
 
-Bash
+
 
 # مطمئن شوید که در شاخه مقصد هستید (مثلاً main)
 git merge feature-branch
@@ -74,7 +78,7 @@ English: Deletes the specified local branch. The -d flag only deletes the branch
 
 دستور / Command:
 
-Bash
+
 
 git branch -d old-branch-name
 🕰️ ۳. تاریخچه، بازگردانی و Diff (History, Undoing, and Diff)
@@ -85,11 +89,11 @@ English: Displays the history of commits in reverse chronological order.
 
 دستور / Command:
 
-Bash
+
 
 # نمایش ساده
 git log
-Bash
+
 
 # نمایش گرافیکی خطی
 git log --oneline --graph
@@ -100,15 +104,15 @@ English: Shows the differences between the working directory, the Staging Area, 
 
 دستور / Command:
 
-Bash
+
 
 # تفاوت بین فضای کاری و Staging
 git diff
-Bash
+
 
 # تفاوت بین Staging و آخرین Commit
 git diff --staged
-Bash
+
 
 # تفاوت بین دو Commit
 git diff commit_hash_1 commit_hash_2
@@ -119,7 +123,7 @@ English: Undoes local modifications to a file, restoring it to the state of the 
 
 دستور / Command:
 
-Bash
+
 
 git restore file_name.txt
 3.4. خروج از Staging (Unstage Files)
@@ -129,7 +133,7 @@ English: Unstages files from the Staging Area, keeping them in the working direc
 
 دستور / Command:
 
-Bash
+
 
 git restore --staged file_name.txt
 3.5. بازنشانی (Reset)
@@ -139,11 +143,11 @@ English: Modifies the commit history and reverts to a previous commit. soft remo
 
 دستور / Command:
 
-Bash
+
 
 # بازگشت به commit قبلی (فایل‌ها دست نخورده باقی می‌مانند)
 git reset HEAD~1
-Bash
+
 
 # بازگشت به commit خاص (تمام تغییرات پس از آن commit از بین می‌روند)
 git reset --hard commit_hash
@@ -155,7 +159,7 @@ English: Displays details of the configured remote repositories (such as the URL
 
 دستور / Command:
 
-Bash
+
 
 git remote -v
 4.2. نادیده گرفتن فایل‌ها (Ignoring Files)
@@ -165,10 +169,74 @@ English: Used to specify files and directories that Git should not track (e.g., 
 
 دستور / Command:
 
-Bash
+
 
 # پس از ایجاد یا ویرایش فایل .gitignore
 git add .gitignore
-Bash
+
 
 git commit -m "Add .gitignore file"
+🧩 ۵. ذخیره موقت (Stashing)
+5.1. ذخیره موقت تغییرات (Stash Changes)
+فارسی: تغییرات محلی موجود در فضای کاری و Staging Area را به صورت موقت ذخیره می‌کند و فضای کاری را تمیز می‌کند. این کار برای سوییچ سریع بین شاخه‌ها مفید است.
+
+English: Temporarily saves local modifications in the working directory and Staging Area, cleaning up the working directory. This is useful for quickly switching branches.
+
+دستور / Command:
+
+
+# ذخیره موقت با پیام توصیفی
+git stash push -m "work in progress on feature X"
+5.2. مشاهده Stashها (List Stashes)
+فارسی: لیست تمامی ذخیره‌های موقت موجود را نشان می‌دهد.
+
+English: Lists all existing temporary stashes.
+
+دستور / Command:
+
+
+
+git stash list
+5.3. اعمال تغییرات ذخیره شده (Apply Stashed Changes)
+فارسی: تغییرات ذخیره شده در آخرین Stash را به فضای کاری اعمال می‌کند (بدون حذف آن Stash از لیست).
+
+English: Applies the changes stored in the latest stash to the working directory (without deleting that stash from the list).
+
+دستور / Command:
+
+
+
+git stash apply
+5.4. اعمال و حذف Stash (Apply and Drop Stash)
+فارسی: تغییرات آخرین Stash را اعمال کرده و آن را از لیست حذف می‌کند.
+
+English: Applies the latest stash changes and removes the stash from the list.
+
+دستور / Command:
+
+
+
+git stash pop
+🔄 ۶. بازسازی تاریخچه (Rebasing)
+6.1. بازسازی (Rebase)
+فارسی: Commitهای شاخه فعلی را بر روی آخرین Commit یک شاخه دیگر (مثلاً main) اعمال می‌کند و تاریخچه را خطی و تمیز نگه می‌دارد. این کار جایگزینی برای git merge است.
+
+English: Reapplies the commits of the current branch on top of the latest commit of another branch (e.g., main), keeping the history linear and clean. This is an alternative to git merge.
+
+دستور / Command:
+
+
+
+# در شاخه feature-branch هستید
+git rebase main
+6.2. Rebase تعاملی (Interactive Rebase)
+فارسی: برای بازنویسی تاریخچه (مانند ادغام چند Commit در یک Commit یا تغییر پیام‌های Commit).
+
+English: Used for rewriting history (such as squashing multiple commits into one or modifying commit messages).
+
+دستور / Command:
+
+
+
+# بازسازی تعاملی تا 3 Commit قبل
+git rebase -i HEAD~3
