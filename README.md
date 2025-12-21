@@ -49,3 +49,4 @@
 | English | فارسی |
 | :--- | :--- |
 | Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**. Feel free to fork the repo and create a pull request, or open an issue with suggestions. Don't forget to give the project a star! ⭐ | مشارکت شماست که جامعه متن‌باز را به چنین مکان شگفت‌انگیزی برای یادگیری، الهام‌بخشی و خلق کردن تبدیل می‌کند. هرگونه مشارکت شما **بی‌نهایت ارزشمند** خواهد بود. برای مشارکت، می‌توانید ریپازیتوری را Fork کرده و یک Pull Request ایجاد کنید، یا یک Issue برای ارائه پیشنهادات خود باز کنید. یادتان نرود به پروژه ستاره بدهید! ⭐ |
+
