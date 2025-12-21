@@ -1,6 +1,8 @@
 # 💎 The Ultimate Git Reference — راهنمای جامع و نهایی گیت
 
 This is the complete Git guide including all essential, advanced, and professional commands.
+
+---
 این یک راهنمای کامل شامل تمام دستورات ضروری، پیشرفته و تخصصی گیت است.
 
 ---
@@ -122,4 +124,7 @@ This is the complete Git guide including all essential, advanced, and profession
 # ⚙️ 11) Internal (Plumbing) Commands — دستورات داخلی
 
 Git includes low-level commands for direct repository manipulation, known as "plumbing" (e.g., `hash-object`, `cat-file`, `write-tree`). These are typically used for scripting or deep inspection, not daily work.
+
+---
 گیت شامل دستورات سطح پایینی (مانند `hash-object`, `cat-file`) است که برای دستکاری مستقیم مخزن به کار می‌روند و معمولاً در کارهای روزمره استفاده نمی‌شوند.
+
