@@ -39,7 +39,7 @@
 
 | English | فارسی |
 | :--- | :--- |
-| You can browse the files directly on GitHub or, for offline access, clone the repository to your local machine: | <p dir="rtl">می‌توانید فایل‌ها را مستقیماً در گیت‌هاب مشاهده کنید یا برای دسترسی آفلاین، ریپازیتوری را روی سیستم خود کلون کنید:</p> |
+| You can browse the files directly on GitHub or, for offline access, clone the repository to your local machine: | <p dir="rtl"> برای دسترسی آفلاین، ریپازیتوری را روی سیستم خود کلون کنید:</p> |
 | `git clone https://github.com/abolfazlghasemi83/Git-Cheat-Sheet.git` | `git clone https://github.com/abolfazlghasemi83/Git-Cheat-Sheet.git` |
 
 ---
